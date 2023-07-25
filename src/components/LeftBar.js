@@ -5,14 +5,14 @@ const LeftBar = () => {
   return (
     <aside
       style={{
-        border: "1px solid black",
+        borderRight: "2px solid #444444",
         width: "20%",
         textAlign: "center",
         height: "1000px"
       }}
     >
       <Profile />
-      <h1>게시판 목록</h1>
+      <h1 style={{paddingTop:'1.5px',height:'23px',borderRadius:5,marginLeft:'20px',marginRight:'20px',border:'2px solid #999999',fontSize:17, color:'#777777'}}>다른 게시판</h1>
       <Category />
     </aside>
   );

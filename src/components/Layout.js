@@ -6,7 +6,7 @@ import Main from "./Main";
 
 const Layout = (props) => {
   return (
-    <div style={{ display: "flex" }}>
+    <div style={{ display: "flex",}}>
       <LeftBar />
       <div style={{ width: "80%" }}>
         <Header />
