@@ -1,15 +1,32 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import reportWebVitals from './reportWebVitals';
-import Layout from './components/Layout';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+import Layout from "./components/Layout";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import Home from "./components/content/Home";
+import About from "./components/content/About";
+import Detail from "./components/content/Detail";
+import PostList from "./components/content/PostList";
+import Sign from "./components/content/Sign";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Layout>
-      12312312
-    </Layout>
+    <BrowserRouter>
+      <div>
+        <Layout>
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/sign" element={<Sign />} />
+            <Route path="/:categoryName" element={<PostList />} />
+            <Route path="/:categoryName/:postId" element={<Detail />} />
+          </Routes>
+        </Layout>
+      </div>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
