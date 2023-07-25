@@ -1,7 +1,14 @@
 const Header = () => {
   return (
-    <header style={{ borderBottom: "1px solid black", top: 0, width: "100%", textAlign: "center" }}>
-      <h1>Header</h1>
+    <header
+      style={{
+        borderBottom: "1px solid black",
+        width: "100%",
+        textAlign: "center",
+        height: "200px",
+      }}
+    >
+      배경
     </header>
   );
 };
