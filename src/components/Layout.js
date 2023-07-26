@@ -11,7 +11,7 @@ const Layout = (props) => {
       <div style={{ width: "80%" }}>
         <Header />
         <div style={{ display: "flex" }}>
-          <Main name="컨텐츠" style={{ textAlign: "center" }}>
+          <Main style={{ textAlign: "center" }}>
             {props.children}
           </Main>
           <RightBar />
