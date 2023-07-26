@@ -9,7 +9,8 @@ import Home from "./components/content/Home";
 import About from "./components/content/About";
 import Detail from "./components/content/Detail";
 import PostList from "./components/content/PostList";
-import Sign from "./components/content/Sign";
+import SignIn from "./components/content/SignIn";
+import SignUp from "./components/content/SignUp";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -20,7 +21,8 @@ root.render(
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/sign" element={<Sign />} />
+            <Route path="/signin" element={<SignIn />} />
+            <Route path="/signup" element={<SignUp />} />
             <Route path="/:categoryName" element={<PostList />} />
             <Route path="/:categoryName/:postId" element={<Detail />} />
           </Routes>

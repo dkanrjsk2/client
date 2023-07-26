@@ -1,32 +1,8 @@
 import React, { useState } from "react";
 
-const Sign = () => {
+const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
-  const handleSignUp = async () => {
-    try {
-      console.log("회원가입", email, password);
-      const response = await fetch("/users/signup", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, password }),
-      });
-      const data = await response.json();
-      if (response.status === 200) {
-        // 회원가입 성공
-        sessionStorage.setItem("email", email);
-        alert(data.message);
-      } else {
-        // 회원가입 실패
-        alert(data.message);
-      }
-    } catch (error) {
-      console.error(error);
-    }
-  };
 
   const handleSignIn = async () => {
     try {
@@ -41,8 +17,12 @@ const Sign = () => {
       const data = await response.json();
       if (response.status === 200) {
         // 로그인 성공
+        const { email, mbti, username } = data.user;
         sessionStorage.setItem("email", email);
+        sessionStorage.setItem("mbti", mbti);
+        sessionStorage.setItem("username", username);
         alert(data.message);
+        window.location.href = `/${mbti}`;
       } else {
         // 로그인 실패
         alert(data.message);
@@ -51,6 +31,7 @@ const Sign = () => {
       console.error(error);
     }
   };
+  
 
   return (
     <div style={{
@@ -59,7 +40,7 @@ const Sign = () => {
         alignItems: "center",
         height: "90vh",
       }}>
-      <h1>회원가입</h1>
+      <h1>로그인</h1>
       <input
         type="email"
         placeholder="Email"
@@ -75,10 +56,9 @@ const Sign = () => {
       />
       <br />
       <br />
-      <button onClick={handleSignUp}>Sign Up</button>
       <button onClick={handleSignIn}>Sign In</button>
     </div>
   );
 };
 
-export default Sign;
+export default SignIn;

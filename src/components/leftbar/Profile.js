@@ -1,13 +1,44 @@
 import { Link } from "react-router-dom";
-import profileImage from '../../images/image8.jpeg'
+import profileImage from "../../images/image8.jpeg";
 const Profile = () => {
+  const handleSignOut = () => {
+    sessionStorage.clear();
+    window.location.href = `/`;
+  };
   return (
-    <header style={{ borderBottom: "2px solid #444444", textAlign: "center", height: "370px" }}>
+    <header
+      style={{
+        borderBottom: "2px solid #444444",
+        textAlign: "center",
+        height: "370px",
+      }}
+    >
       <Link to={`/`}>
-            <h3 style={{borderWidth:2,paddingBottom:'5px',border:'1px solid black',fontSize:24, paddingTop:'5px', marginRight:'150px', marginLeft:'20px'}}>Healing</h3>
-          </Link>
-      <h1 style={{ marginTop: "40px", fontSize:20, color:'#444444' }}>Welcome to INTP 게시판</h1>
-      <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "150px" }}>
+        <h3
+          style={{
+            borderWidth: 2,
+            paddingBottom: "5px",
+            border: "1px solid black",
+            fontSize: 24,
+            paddingTop: "5px",
+            marginRight: "150px",
+            marginLeft: "20px",
+          }}
+        >
+          Healing
+        </h3>
+      </Link>
+      <h1 style={{ marginTop: "40px", fontSize: 20, color: "#444444" }}>
+        Welcome to INTP 게시판
+      </h1>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "150px",
+        }}
+      >
         <img
           src={profileImage} // 이미지 파일의 경로
           alt="Profile"
@@ -19,7 +50,8 @@ const Profile = () => {
           }}
         />
       </div>
-      <h1 style={{fontSize:20,color:'#444444'}}>NickName</h1>
+      <h1 style={{ fontSize: 20, color: "#444444" }}>NickName</h1>
+      <button onClick={handleSignOut}>signout</button>
     </header>
   );
 };
