@@ -12,8 +12,8 @@
 
 ### B. 개발 환경
 
-- OS: Windows 11(22H2)
-- Front : React.js
+- OS: Windows 10
+- Front : React
 - Back : Express
 - Database: MySQL
 - Language: Javascript
