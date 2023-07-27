@@ -12,6 +12,7 @@ import PostList from "./components/content/PostList";
 import SignIn from "./components/content/SignIn";
 import SignUp from "./components/content/SignUp";
 import Plus from "./components/content/Plus";
+import FriendProfile from "./components/FriendProfile";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -27,6 +28,7 @@ root.render(
             <Route path="/:categoryName" element={<PostList />} />
             <Route path="/:categoryName/:postId" element={<Detail />} />
             <Route path="/plus" element={<Plus/>}/>
+            <Route path="/friendprofile" element={<FriendProfile/>}/>
           </Routes>
         </Layout>
       </div>

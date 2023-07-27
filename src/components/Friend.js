@@ -25,7 +25,6 @@ function Friend() {
               </div>
               
               <h3 style={{marginLeft:'15px',fontSize:12,color:'#444444'}}>{id}</h3>
-              
               <HiUser style={{fontSize:20,paddingLeft:'115px', color:'#444444'}}/>
               
             </div>
