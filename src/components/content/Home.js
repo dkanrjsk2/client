@@ -1,8 +1,9 @@
+import React from "react";
 
 
 const Home = () => (
-  <h2>
-  Home
-  </h2>
+  <div>
+    Home
+  </div>
 );
 export default Home;

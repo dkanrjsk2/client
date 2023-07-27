@@ -14,7 +14,7 @@ const LeftBar = () => {
       }}
     >
       {isSignedIn ? <Profile /> : <Unsign />}
-      <h1 style={{paddingTop:'1.5px',height:'23px',borderRadius:5,marginLeft:'20px',marginRight:'20px',border:'2px solid #999999',fontSize:17, color:'#777777'}}>다른 게시판</h1>
+      <h1 style={{backgroundColor:'#ccdddd',paddingTop:'1.5px',height:'23px',borderRadius:5,marginLeft:'20px',marginRight:'20px',border:'2px solid #552222',fontSize:17, color:'#552222'}}>다른 게시판</h1>
       <Category />
     </aside>
   );

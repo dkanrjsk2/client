@@ -3,8 +3,8 @@ import React, { useState } from "react";
 const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
   const handleSignIn = async () => {
+    
     try {
       console.log("로그인", email, password);
       const response = await fetch("/users/signin", {
@@ -38,25 +38,47 @@ const SignIn = () => {
         // display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        height: "90vh",
+        width:"400px",
+        height: "35vh",
+        display:'flex',
+        marginTop:'50px',
+        flexDirection:'column',
+        border:'3px solid #1188bb',
+        borderRadius:10,
+        backgroundColor:'white',  
+        paddingBottom:'50px'
       }}>
-      <h1>로그인</h1>
+      <h1 style={{color:'#1188bb'}}>로그인</h1>
       <input
         type="email"
-        placeholder="Email"
+        placeholder="e-mail"
         value={email}
+        style={{backgroundColor: "#bbbbbb",
+        color: "black",
+        fontSize: 15,
+        padding: "5px 30px",
+        borderRadius: 10,
+        border: "none",
+        margin:'5px',
+        marginTop:'15px',
+        marginBottom:'15px'}}
         onChange={(e) => setEmail(e.target.value)}
+        
       />
-      <br />
       <input
         type="password"
-        placeholder="Password"
+        placeholder="password"
         value={password}
+        style={{backgroundColor: "#bbbbbb",
+        color: "black",
+        fontSize: 15,
+        padding: "5px 30px",
+        borderRadius: 10,
+        border: "none",
+        margin:'5px'}}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <br />
-      <br />
-      <button onClick={handleSignIn}>Sign In</button>
+      <button onClick={handleSignIn} style={{fontWeight:'bold',color:'#115511',backgroundColor:'#ccddcc',cursor: "pointer",marginTop:'15px', padding:"5px 20px", border:'1px solid #1188bb', borderRadius:10}}>Sign In</button>
     </div>
   );
 };
