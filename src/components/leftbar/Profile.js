@@ -29,7 +29,7 @@ const Profile = () => {
         </h3>
       </Link>
       <h1 style={{ marginTop: "40px", fontSize: 20, color: "#444444" }}>
-        Welcome to INTP 게시판
+        Welcome to {sessionStorage.getItem("mbti")} 게시판
       </h1>
       <div
         style={{
@@ -50,7 +50,7 @@ const Profile = () => {
           }}
         />
       </div>
-      <h1 style={{ fontSize: 20, color: "#444444" }}>NickName</h1>
+      <h1 style={{ fontSize: 20, color: "#444444" }}>{sessionStorage.getItem("username")}</h1>
       <button onClick={handleSignOut}>signout</button>
     </header>
   );
