@@ -27,7 +27,7 @@ root.render(
             <Route path="/signup" element={<SignUp />} />
             <Route path="/:categoryName" element={<PostList />} />
             <Route path="/:categoryName/:postId" element={<Detail />} />
-            <Route path="/plus" element={<Plus/>}/>
+            <Route path="/plus/:categoryName" element={<Plus/>}/>
             <Route path="/friendprofile" element={<FriendProfile/>}/>
           </Routes>
         </Layout>
