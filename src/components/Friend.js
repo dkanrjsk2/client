@@ -18,7 +18,7 @@ function Friend() {
                   style={{
                     width: "25px", // 이미지 크기 조절
                     height: "25px",
-                    borderRadius: 10, // 원형으로 만들기 위한 속성
+                    borderRadius: 7, // 원형으로 만들기 위한 속성
                     objectFit: "cover", // 이미지가 원형으로 잘릴 경우를 대비하여 가리기 위한 속성
                   }}
                 />

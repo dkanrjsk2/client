@@ -38,46 +38,80 @@ const SignUp = () => {
   };
 
   return (
-    <div
-      style={{
-        // display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "90vh",
-      }}
-    >
-      <h1>회원가입</h1>
-      <input
-        type="email"
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <br />
-      <input
-        type="password"
-        placeholder="Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <br />
-      <input
+    <div style={{
+      // display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      width:"400px",
+      height: "45vh",
+      display:'flex',
+      marginTop:'50px',
+      flexDirection:'column',
+      border:'3px solid #1188bb',
+      borderRadius:10,
+      backgroundColor:'white',  
+      paddingBottom:'50px'
+    }}>
+    <h1 style={{marginTop:'45px',color:'#1188bb'}}>회원가입</h1>
+    <input
+      type="email"
+      placeholder="e-mail"
+      value={email}
+      style={{backgroundColor: "#bbbbbb",
+      color: "black",
+      fontSize: 15,
+      padding: "5px 30px",
+      borderRadius: 10,
+      border: "none",
+      margin:'5px',
+      marginTop:'15px',
+      marginBottom:'20px'}}
+      onChange={(e) => setEmail(e.target.value)}
+      
+    />
+    <input
+      type="password"
+      placeholder="password"
+      value={password}
+      style={{backgroundColor: "#bbbbbb",
+      color: "black",
+      fontSize: 15,
+      padding: "5px 30px",
+      borderRadius: 10,
+      border: "none",
+      margin:'5px',
+      marginBottom:'20px'}}
+      onChange={(e) => setPassword(e.target.value)}
+    />
+    <input
         type="mbti"
         placeholder="MBTI"
         value={mbti}
+        style={{backgroundColor: "#bbbbbb",
+        color: "black",
+        fontSize: 15,
+        padding: "5px 30px",
+        borderRadius: 10,
+        border: "none",
+        margin:'5px',
+        marginBottom:'20px'}}
         onChange={(e) => setMbti(e.target.value)}
       />
-      <br />
       <input
         type="username"
         placeholder="Name"
         value={username}
+        style={{backgroundColor: "#bbbbbb",
+        color: "black",
+        fontSize: 15,
+        padding: "5px 30px",
+        borderRadius: 10,
+        border: "none",
+        margin:'5px'}}
         onChange={(e) => setUsername(e.target.value)}
       />
-      <br />
-      <br />
-      <button onClick={handleSignUp}>Sign Up</button>
-    </div>
+    <button onClick={handleSignUp} style={{fontWeight:'bold',color:'#115511',backgroundColor:'#ccddcc',cursor: "pointer",marginTop:'40px', padding:"5px 20px", border:'1px solid #1188bb', borderRadius:10}}>Sign Up</button>
+  </div>
   );
 };
 

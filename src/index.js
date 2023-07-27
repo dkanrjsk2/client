@@ -11,6 +11,7 @@ import Detail from "./components/content/Detail";
 import PostList from "./components/content/PostList";
 import SignIn from "./components/content/SignIn";
 import SignUp from "./components/content/SignUp";
+import Plus from "./components/content/Plus";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -25,6 +26,7 @@ root.render(
             <Route path="/signup" element={<SignUp />} />
             <Route path="/:categoryName" element={<PostList />} />
             <Route path="/:categoryName/:postId" element={<Detail />} />
+            <Route path="/plus" element={<Plus/>}/>
           </Routes>
         </Layout>
       </div>
