@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {useParams} from 'react-router-dom'
 import profileImage from "../images/image8.jpeg";
 import { RxArrowLeft } from 'react-icons/rx';
@@ -10,6 +10,7 @@ const goBack = () => {
 
 function FriendProfile(props) {
     const { friendId } = useParams();
+    const [isfriend, setIsfriend] = useState(false);
     
     return (
         <div style={{borderRadius:10,backgroundColor:'#dddddd',border:'2px solid #1188bb',height:'500px', paddingTop:'20px'}}>
@@ -21,7 +22,7 @@ function FriendProfile(props) {
                     {friendId}
                 </h4>
                 <h4 style={{marginLeft:'540px',fontSize:15, color:'black', border:'2px solid black', borderRadius:5, width:'40px', display:'flex', flexDirection:'row', alignItems:'center', justifyContent:'center'}}>
-                    해제
+                    {isfriend ? '해제' : '추가'}
                 </h4>
             </div>
             <div style={{marginTop:'40px', display:'flex', alignItems:'center', justifyContent:'center'}}>

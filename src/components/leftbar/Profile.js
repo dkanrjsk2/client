@@ -5,6 +5,15 @@ const Profile = () => {
     sessionStorage.clear();
     window.location.href = `/`;
   };
+  const buttonStyle = {
+    backgroundColor: "#bbbbbb",
+    color: "white",
+    fontSize: 15,
+    padding: "5px 30px",
+    borderRadius: 10,
+    border: "none",
+    cursor: "pointer",
+  };
   return (
     <header
       style={{
@@ -51,7 +60,7 @@ const Profile = () => {
         />
       </div>
       <h1 style={{ fontSize: 20, color: "#444444" }}>{sessionStorage.getItem("username")}</h1>
-      <button onClick={handleSignOut}>signout</button>
+      <button style={buttonStyle} onClick={handleSignOut}>signout</button>
     </header>
   );
 };
