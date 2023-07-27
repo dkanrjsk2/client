@@ -28,7 +28,7 @@ root.render(
             <Route path="/:categoryName" element={<PostList />} />
             <Route path="/:categoryName/:postId" element={<Detail />} />
             <Route path="/plus/:categoryName" element={<Plus/>}/>
-            <Route path="/friendprofile" element={<FriendProfile/>}/>
+            <Route path="/friendprofile/:friendId" element={<FriendProfile/>}/>
           </Routes>
         </Layout>
       </div>
